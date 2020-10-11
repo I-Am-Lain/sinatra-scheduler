@@ -1,0 +1,14 @@
+<h1>TIME TO EDIT <%= @course.name %>!!</h1>
+
+<form method="post" action="/courses/<%= @course.id %>">
+<input id="hidden" type="hidden" name="_method" value="patch">
+
+Course Name: <input type="text" name="course[name]" value="<%= @course.name %>">
+<br>
+Course Professor: <input type="text" name="course[professor]" value="<%= @course.professor %>">
+<br>
+Course Credits: <input type="text" name="course[credits]" value="<%= @course.credits %>">
+
+<br><br>
+<input type="submit" value="Save My Edit">
+</form>

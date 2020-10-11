@@ -1,0 +1,19 @@
+<h1><%= @course.name %></h1>
+
+<p>Professor for this course: <%= @course.professor %></p>
+
+<br><br>
+
+<p>Credits: <%= @course.credits %></p>
+
+<br><br>
+
+<form method="post" action="/schedule/<%= @course.id %>">
+<input type="submit" value="Add Course">
+</form>
+
+<br><br>
+
+<form method="get" action="/courses/<%= @course.id %>/edit">
+<input type="submit" value="Edit Course">
+</form>

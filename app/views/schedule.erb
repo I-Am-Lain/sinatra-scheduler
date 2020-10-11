@@ -1,0 +1,8 @@
+<h1> THIS IS THE SCHEDULE </h1>
+
+<% @schedule.each do |s| %>
+    <p><%= s.course.name %> - <%= s.course.professor %> - <%= s.course.credits %> </p>
+<% end %>
+
+<br><br>
+<a href="/courses">Back to Courses?</a>
