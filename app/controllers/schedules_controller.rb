@@ -6,6 +6,12 @@ class SchedulesController < ApplicationController
         erb :schedule
     end
 
+
+    post '/schedule/:id/delete' do |id|   ###unsure why I'm not able to do delete '' instead
+        Schedule.find(id).delete
+        redirect "/schedule"
+    end
+
     post '/schedule/:id' do |id|
         @course = Course.find(id)
  
@@ -26,5 +32,5 @@ class SchedulesController < ApplicationController
 
         redirect "/schedule"
     end
-  
+
   end

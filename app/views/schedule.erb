@@ -2,6 +2,13 @@
 
 <% @schedule.each do |s| %>
     <p><%= s.course.name %> - <%= s.course.professor %> - <%= s.course.credits %> </p>
+
+    <form method="post" action="/schedule/<%= s.id %>/delete">
+    <input id="hidden" type="hidden" name="_method" value="DELETE">
+    
+    <input type="submit" value="delete">
+
+    </form>
 <% end %>
 
 <br><br>
